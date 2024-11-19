@@ -81,7 +81,7 @@ button:hover {
     width: 80px;
     bottom: 0;
     animation: game 1.5s infinite linear;
-    transform: scale(5.0) translateY(-10px); /* Suspende a imagem um pouco para cima */
+    transform: scale(7.0) translateY(-10.5px); /* Suspende a imagem um pouco para cima */
 
               
 }
@@ -259,3 +259,4 @@ button:hover {
         width: 300px;
     }
 }
+
