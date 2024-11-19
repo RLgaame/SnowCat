@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snow the Cat</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script> 
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+</head> 
+<body>
+    <style>
+        body{
+            background-repeat: no-repeat;
+            background-size: cover;      /* Faz a imagem cobrir toda a tela */
+            background-position: center; /* Centraliza a imagem */
+            background-attachment: fixed; /* A imagem permanece fixa quando você rola a página */
+            height: 100%;                 /* Garante que o corpo ocupe 100% da altura da janela */
+            margin: 0;                    /* Remove margens do body */
+            padding: 0;                   /* Remove o padding do body */
+            box-sizing: border-box;       /* Garante que o padding e border não afetem as dimensões */
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+        div{
+            font-family: "Orbitron", sans-serif;
+        }
+
+        .level-up-message {
+            background-image: linear-gradient( #65fc00, rgb(66, 90, 78));
+            color: transparent; /* Torna o texto transparente para exibir o gradiente */
+            background-clip: text; /* Faz o gradiente aparecer no texto */
+            -webkit-background-clip: text; /* Para suportar o Chrome e o Safari */
+            font-size: 32px;            /* Tamanho da fonte */
+            font-weight: bold;          /* Peso da fonte */
+            text-align: center;         /* Centraliza o texto */
+            position: absolute;         /* Permite posicionar no centro da tela */
+            top: 50%;                   /* Centraliza verticalmente */
+            left: 50%;                  /* Centraliza horizontalmente */
+            transform: translate(-50%, -50%); /* Ajusta o alinhamento */
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6); /* Sombra para dar destaque */
+        }
+
+        button {
+            background-image: linear-gradient(aqua, rgb(81, 161, 161));
+            color: rgb(255, 255, 255);              /* Cor do texto */
+            border: none;              /* Sem borda */
+            padding: 10px 20px;        /* Espaçamento interno */
+            font-size: 16px;           /* Tamanho da fonte */
+            cursor: pointer;          /* Cursor de mão ao passar o mouse */
+            border-radius: 5px;        /* Borda arredondada */
+            transition: background-color 0.3s; /* Efeito ao passar o mouse */
+            font-family: "Orbitron", sans-serif;
+
+
+        }
+
+       
+
+        
+    </style>
+
+<div class="gamer-board">
+<img src="nuvem.png" class="nuvem">
+<img src="pessoa/pessoa.gif" class="pessoa">
+<img src="quadrado.png" class="quadrado">
+
+     
+
+    
+
+        <!-- Botão para recarregar a página -->
+        <button onclick="window.location.reload();"><strong>Jogar novamente</strong></button>
+
+    
+
+
+        <div id="levelUpMessage" class="level-up-message"></div>
+
+        <div id="jumpCount">Pulos: 0</div>
+        <div id="level">Nível: 1</div>
+        <div id="gameOverMessage"></div>
+
+        <div class="body">
+            <img src="mount-everest-8297059_640.webp" alt=""  width="1000px" height="auto">
+            <div class="snowflake"></div>
+            <div class="snowflake"></div>
+            <div class="snowflake"></div>
+            <div class="snowflake"></div>
+            <div class="snowflake"></div>
+            <div class="snowflake"></div>
+        </div>
+
+        
+       
+
+
+
+    </div>
+</body>
+</html>

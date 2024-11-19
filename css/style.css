@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+html, body {
+    overflow: hidden; /* Impede que a barra de rolagem apareça */
+    height: 100%; /* Garantir que o corpo ocupe 100% da altura da tela */
+
+}
+
+.montanha{
+    transform: scale(1.0) translateY(110px); /* Suspende a imagem um pouco para cima */
+
+
+
+}
+
+a {
+    text-decoration: none;
+    font-family: "Orbitron", sans-serif;
+}
+
+
+button {
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px black;
+    background-color: rgb(0, 117, 252);
+    border: none;
+    margin-top: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+#timer {
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    font-size: 16px;
+    color: white;
+    font-weight: bold;
+}
+
+.gamer-board {
+    width: 100%;
+    height: 90vh;
+    margin-top: 50px;
+    border-bottom: 20px solid rgb(255, 255, 255);
+    margin: 0 auto;
+    position: relative;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(204, 204, 204));
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites */
+    padding-top: 50px;
+}
+
+button:hover {
+    background-color: rgb(141, 155, 236);
+    cursor: pointer;
+}
+
+.nuvem {
+    position: absolute;
+}
+
+.quadrado {
+    position: absolute;
+    width: 80px;
+    bottom: 0;
+    animation: game 1.5s infinite linear;
+    transform: scale(5.0) translateY(-10px); /* Suspende a imagem um pouco para cima */
+
+              
+}
+
+.pessoa {
+    width: 150px;
+    position: absolute;
+    bottom: 0;
+    transition: bottom 0.3s, transform 0.3s;
+    transform: scale(1.8) translateY(-7px); /* Suspende a imagem um pouco para cima */
+    left: 25px;
+    margin: auto;
+    mix-blend-mode: multiply;
+}
+
+.jump {
+    animation: jump 700ms ease-in-out; /* Aplica o efeito de pulo */
+}
+
+.nuvem {
+    width: 550px;
+    animation: nuvem 10s infinite linear;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px; /* Começa acima da tela */
+    background-color: rgb(253, 253, 253);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: snow 5s linear infinite;
+}
+
+/* Criando diferentes animações para os flocos */
+.snowflake:nth-child(1) {
+    left: 10%;
+    animation-duration: 6s;
+    animation-delay: 0s;
+}
+
+.snowflake:nth-child(2) {
+    left: 30%;
+    animation-duration: 8s;
+    animation-delay: 1s;
+}
+
+.snowflake:nth-child(3) {
+    left: 50%;
+    animation-duration: 7s;
+    animation-delay: 2s;
+}
+
+.snowflake:nth-child(4) {
+    left: 70%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+
+.snowflake:nth-child(5) {
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 4s;
+}
+
+/* Animação dos flocos caindo */
+@keyframes snow {
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0.5;
+    }
+}
+
+
+/* Keyframe para o movimento do quadrado */
+@keyframes game {
+    from {
+        right: -80px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+/* Keyframe para o pulo da pessoa */
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+    40% {
+        bottom: 200px; /* Altura máxima do pulo */
+    }
+    60% {
+        bottom: 200px; /* Mantém a altura máxima por mais tempo */
+    }
+    100% {
+        bottom: 0; /* Volta ao chão */
+    }
+}
+
+/* Keyframe para a animação das nuvens */
+@keyframes nuvem {
+    from {
+        right: -550px;
+    }
+    to {
+        right: 100%;
+    }
+}
+
+
+/* Media Queries para dispositivos móveis */
+@media (max-width: 768px) {
+    button {
+        width: 50%;
+        height: auto;
+        margin-top: 30px;
+        padding: 10px 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gamer-board {
+        width: 100%;
+        margin-top: 40px;
+        height: 80vh;
+        padding-top: 20px;
+    }
+
+    .quadrado {
+        width: 60px;
+        transform: scale(5.0) translateY(-8px); /* Suspende a imagem um pouco para cima */
+
+    }
+
+    .pessoa {
+        width: 120px;
+    }
+
+    .nuvem {
+        width: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    button {
+        margin-top: 10px;
+        height: auto;
+        padding: 10px 20px;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .gamer-board {
+        margin-top: 30px;
+        height: 70vh;
+        padding-top: 10px;
+    }
+
+    .quadrado {
+        width: 50px;
+    }
+
+    .pessoa {
+        width: 100px;
+    }
+
+    .nuvem {
+        width: 300px;
+    }
+}
