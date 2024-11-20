@@ -167,7 +167,6 @@
     </div>
 
     <div class="body">
-        <img src="mount-everest-8297059_640.webp" alt=""  width="1000px" height="auto">
         <div class="snowflake"></div>
         <div class="snowflake"></div>
         <div class="snowflake"></div>
